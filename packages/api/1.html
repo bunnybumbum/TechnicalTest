@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Client Test</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Socket.IO Client Test</h1>
+    <script>
+        const socket = io('http://localhost:3001');
+
+        socket.on('connect', () => {
+            console.log('Connected to WebSocket server');
+        });
+
+        socket.on('userCreated', (data) => {
+            console.log('User Created:', data);
+        });
+
+        socket.on('userUpdated', (data) => {
+            console.log('User Updated:', data);
+        });
+
+        socket.on('userDeleted', (data) => {
+            console.log('User Deleted:', data);
+        });
+    </script>
+</body>
+</html>
