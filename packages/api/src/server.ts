@@ -96,11 +96,13 @@ io.on('connection', (socket) => {
 
 const startServer = async () => {
   try {
-    await server.listen(3000);
-    httpServer.listen(3001, () => {
-      console.log(`Socket.IO server running at http://localhost:3001/`);
+    const port = process.env.PORT || 3000;
+    await server.listen(port, '0.0.0.0'); // Listen on all network interfaces
+    // await server.listen(3000);
+    httpServer.listen(Number(port) + 1, () => {
+      console.log(`Socket.IO server running at http://localhost:${Number(port) + 1}/`);
     });
-    console.log(`Fastify server running at http://localhost:3000/`);
+    console.log(`Fastify server running at http://localhost:${port}/`);
   } catch (err) {
     server.log.error(err);
     process.exit(1);
