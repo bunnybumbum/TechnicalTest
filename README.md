@@ -271,7 +271,7 @@ Task 7: Monorepo and Separate Packages
 <!-- API DOCUMENTATION -->
 ## Swagger UI
 
-* Swagger UI(API DOCUMENTATION): http://localhost:3000/documentation
+* Swagger UI(API DOCUMENTATION): http://45.87.155.12:3000/documentation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -280,17 +280,17 @@ Task 7: Monorepo and Separate Packages
 
 The first step is to input the "Bearer token" into the Authorize button.(Fill out only "token string" without the prefix word "Bearer" into the gap.)
 
-* GET: http://localhost:3000/greet?name={username}
-* GET: http://localhost:3000/users
-* POST: http://localhost:3000/users
+* GET: http://45.87.155.12:3000/greet?name={username}
+* GET: http://45.87.155.12:3000/users
+* POST: http://45.87.155.12:3000/users
   + Request body object template:
   + {
   +  "name": "username",
   +  "email": "username@example.com",
   +  "password": "123456"
   + }
-* GET: http://localhost:3000/users/{id}
-* PUT: http://localhost:3000/users/{id}
+* GET: http://45.87.155.12:3000/users/{id}
+* PUT: http://45.87.155.12:3000/users/{id}
   + Request body object template:
   + {
   +  "name": "changedusername",
@@ -299,8 +299,8 @@ The first step is to input the "Bearer token" into the Authorize button.(Fill ou
   + }
   +
   + CAUTION: It is possible to update and delete for someone who has only admin role.
-* DELETE: http://localhost:3000/users/{id}
-* POST: http://localhost:3000/register
+* DELETE: http://45.87.155.12:3000/users/{id}
+* POST: http://45.87.155.12:3000/register
   + Request body object template:
   + {
   +    "name": "username",
@@ -308,13 +308,13 @@ The first step is to input the "Bearer token" into the Authorize button.(Fill ou
   +    "password": "123456",
   +    "role": "admin"(or "user")
   + }
-* POST: http://localhost:3000/login
+* POST: http://45.87.155.12:3000/login
   + Request body object template:
   + {
   +    "email": "username@example.com",
   +    "password": "123456",
   + }
-* POST: http://localhost:3000/upload
+* POST: http://45.87.155.12:3000/upload
   + CAUTION: You can test uploading file in Postman(API DOCUMENTATION don't support testing upload files)
   + How to test in Postman: Body -> form-data -> Key: file, Type: File, Value: file location
 
@@ -322,7 +322,7 @@ The first step is to input the "Bearer token" into the Authorize button.(Fill ou
   + In Postman, 
   * Create new socketio request
   * You may set events: "userCreated", "userUpdated", "userDeleted"
-  * Send ws://localhost:3001  
+  * Send ws://45.87.155.12:3001  
 
 <!-- CONTACT -->
 ## Contact
